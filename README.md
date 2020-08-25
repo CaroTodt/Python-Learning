@@ -1,4 +1,3 @@
-Python Learning
 # Python Learning
 This repository contains my learning journey of Python.
 ![alt text](https://anthoncode.com/wp-content/uploads/2019/01/python-logo-png.png)
