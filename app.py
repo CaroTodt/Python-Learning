@@ -172,8 +172,57 @@ print("Comments are fun")
 
 #Try / Except
 try:
+    value = 10 / 0
     number = int(input("Enter a number: "))
     print(number)
-except:
-    print("Invalid Input")
+except ZeroDivisionError as err:
+    print(err)
+except ValueError:
+    print("Invalid input")
+
+# Reading Files
+employee_file = open("C:/Users/carol/Desktop/Phyton/Python Learning/employees.txt", "r")
+ 
+#print(employee_file.readable())
+
+#print(employee_file.readline())
+#print(employee_file.readlines())
+for employee in employee_file.readlines():
+    print(employee)    
+employee_file.close()
+
+# Writing to files
+employee_file = open("C:/Users/carol/Desktop/Phyton/Python Learning/employees.txt", "a")
+
+employee_file.write("\nToby - Human Resources")
     
+employee_file.close()
+
+employee_file = open("C:/Users/carol/Desktop/Phyton/Python Learning/web.html", "w")
+
+employee_file.write("<p> This is a Web Page </p>")
+    
+employee_file.close()
+
+# Modules
+import useful_tools
+import base64
+import docx
+
+print(useful_tools.roll_dice(10))
+
+#Class and Object
+from Student import Student
+
+student1 = Student("Carolina", "Business", 3.1, False)
+print(student1.name)
+
+
+# Building multiples choice
+
+question_prompts = [
+    "What color are apples?\n(a) Red/Green\n(b) Purple\n(c) Orange\n\n",
+    "What color are Bananas?\n Teal\n(b) Magenta\n(c) Yellow\n\n",
+    "What color are strawberries?\n(a) Yellow\n(b) Red\n(c) Blue\n\n"
+]
+
